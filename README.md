@@ -26,4 +26,7 @@ Depois acesse `http://localhost:8000`.
 1. Backend real (ex.: Supabase/Firebase ou API Node) para compartilhar a agenda entre clientes e barbeiros. Basta trocar as funções de `js/store.js`.
 2. Autenticação segura no servidor (hoje o login é só ilustrativo).
 3. Confirmação e lembrete por WhatsApp ou e-mail.
-4. Fotos reais da casa, logotipo e textos definitivos (endereço, telefone e história são fictícios).
+4. Fotos em alta resolução (as atuais em `img/` vieram em tamanho reduzido), logotipo e textos definitivos (endereço, telefone e história são fictícios).
+
+## Fotos
+As imagens ficam em `img/`. Ao trocar uma foto, mantenha o mesmo nome de arquivo ou ajuste o caminho no `index.html` (galeria e seção "A Casa") e no `css/style.css` (fundo do topo, `.hero-photo`).

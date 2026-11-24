@@ -28,6 +28,7 @@
       <nav class="nav-links" aria-label="Principal">
         <a href="#sobre">A Casa</a>
         <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
         <a href="#barbeiros">Barbeiros</a>
         <a href="#contato">Contato</a>
       </nav>
@@ -38,6 +39,7 @@
   <main id="topo">
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-photo" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-seal reveal"><span>J</span><small>EST. 1998</small></div>
         <span class="eyebrow reveal">Barbearia de tradição</span>
@@ -59,9 +61,9 @@
     <!-- SOBRE -->
     <section class="section" id="sobre">
       <div class="container about">
-        <figure class="about-frame reveal" style="margin:0">
-          <svg aria-hidden="true"><use href="#i-scissors"/></svg>
-          <figcaption>Desde 1998, na mesma cadeira</figcaption>
+        <figure class="about-frame about-frame--photo reveal" style="margin:0">
+          <img src="img/poste.jpg" alt="Poste de barbeiro tradicional, listrado em vermelho, branco e azul, na fachada da barbearia" loading="lazy">
+          <figcaption>O poste que anuncia a casa</figcaption>
         </figure>
         <div class="reveal">
           <span class="eyebrow">A Casa</span>
@@ -88,6 +90,38 @@
           <p>Cada serviço acompanha uma dose de café ou whisky da casa.</p>
         </div>
         <div class="menu" id="menu"></div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Galeria</span>
+          <h2>Trabalhos da Casa</h2>
+          <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+          <p>Cada corte é feito com calma, tesoura afiada e atenção ao detalhe.</p>
+        </div>
+        <div class="gallery">
+          <figure class="shot shot--tall reveal" data-full="img/pompadour.jpg">
+            <img src="img/pompadour.jpg" alt="Cliente com pompadour volumoso e barba desenhada" loading="lazy">
+            <figcaption><b>Pompadour clássico</b><span>Corte &amp; Barba</span></figcaption>
+          </figure>
+          <div class="gallery-mid">
+            <figure class="shot shot--wide reveal" data-full="img/corte-tesoura.jpg">
+              <img src="img/corte-tesoura.jpg" alt="Barbeiro finalizando corte com tesoura e pente" loading="lazy">
+              <figcaption><b>Acabamento na tesoura</b><span>Corte Clássico</span></figcaption>
+            </figure>
+            <div class="gallery-cta reveal">
+              <p class="script">“Seu próximo corte pode estar aqui.”</p>
+              <a href="#agendar" class="btn btn--sm">Agendar horário</a>
+            </div>
+          </div>
+          <figure class="shot shot--tall reveal" data-full="img/degrade.jpg">
+            <img src="img/degrade.jpg" alt="Cliente com degradê baixo e topo texturizado" loading="lazy">
+            <figcaption><b>Degradê texturizado</b><span>Corte Clássico</span></figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -236,6 +270,11 @@
       </div>
     </section>
   </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button class="lightbox-close" aria-label="Fechar">×</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+  </div>
 
   <footer class="footer">
     <div class="container">

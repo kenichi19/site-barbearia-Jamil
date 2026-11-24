@@ -38,6 +38,19 @@
     $$('.reveal').forEach((el) => el.classList.add('in'));
   }
 
+  /* ---------- galeria (ampliar foto) ---------- */
+  const lb = $('#lightbox');
+  $$('.shot').forEach((shot) => shot.addEventListener('click', () => {
+    const img = $('img', shot);
+    $('img', lb).src = shot.dataset.full || img.src;
+    $('img', lb).alt = img.alt;
+    $('figcaption', lb).textContent = $('figcaption b', shot)?.textContent || '';
+    lb.classList.add('open');
+  }));
+  const closeLb = () => lb.classList.remove('open');
+  lb.addEventListener('click', (e) => { if (e.target === lb || e.target.closest('.lightbox-close')) closeLb(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
+
   /* ---------- fluxo de agendamento ---------- */
   const state = { step: 1, serviceId: null, barberId: null, date: null, time: null };
   const panels = $$('.step-panel');
