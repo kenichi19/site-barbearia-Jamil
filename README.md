@@ -34,8 +34,8 @@ As imagens ficam em `img/`:
 | Arquivo | Onde aparece |
 |---|---|
 | `cortando.jpg` | Fundo do topo (`css/style.css`, `.hero-photo`) e galeria |
-| `ambiente.jpg` | Seção "A Casa" |
-| `pompadour.jpg`, `degrade.jpg` | Galeria |
+| `ambiente-recorte.jpg` | Seção "A Casa" (recorte de `ambiente.jpg`) |
+| `pompadour-recorte.jpg`, `degrade-recorte.jpg` | Galeria (recortes do ombro para cima; ao clicar abre a original) |
 | `poste.jpg` | Seção de contato |
 
-Para trocar uma foto, envie com o mesmo nome de arquivo (substituindo a antiga).
+Para trocar uma foto, envie com o mesmo nome de arquivo (substituindo a antiga). Fotos recortadas (`-recorte`) precisam ser recortadas de novo a partir da nova original.
