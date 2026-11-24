@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Área do Barbeiro — Barbearia Jamil</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+  <!-- LOGIN -->
+  <section class="login-wrap" id="login-view" hidden>
+    <div class="login-card">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">J</span>
+        <span class="brand-text">Jamil<small>Barbearia</small></span>
+      </a>
+      <h1>Área do Barbeiro</h1>
+      <p>Acesso restrito à equipe da casa.</p>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="l-user">Usuário</label>
+          <input id="l-user" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="l-pass">Senha</label>
+          <input id="l-pass" type="password" autocomplete="current-password" required>
+        </div>
+        <div class="error-msg" id="login-error" role="alert" style="margin:0"></div>
+        <button class="btn" type="submit">Entrar</button>
+      </form>
+      <div class="demo-hint">
+        Protótipo — use <code>admin</code> / <code>jamil123</code>.<br>
+        A autenticação real será feita no servidor na versão final.
+      </div>
+    </div>
+  </section>
+
+  <!-- PAINEL -->
+  <div id="panel-view" hidden>
+    <header class="admin-top">
+      <div class="container">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">J</span>
+          <span class="brand-text">Jamil<small>Painel</small></span>
+        </a>
+        <div class="admin-top-actions">
+          <span class="who">Olá, mestre.</span>
+          <button class="icon-btn" id="reset-btn" title="Restaurar dados de demonstração">Restaurar demo</button>
+          <button class="icon-btn" id="logout-btn">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="container">
+        <div class="admin-head">
+          <div>
+            <span class="eyebrow">Agenda</span>
+            <h1 id="day-title">Hoje</h1>
+            <p id="day-sub"></p>
+          </div>
+          <button class="btn" id="new-btn">+ Novo agendamento</button>
+        </div>
+
+        <div class="toolbar">
+          <div class="date-nav">
+            <button id="prev-day" aria-label="Dia anterior">‹</button>
+            <input type="date" id="date-input" aria-label="Data">
+            <button id="next-day" aria-label="Próximo dia">›</button>
+          </div>
+          <button class="icon-btn" id="today-btn">Hoje</button>
+          <span class="spacer"></span>
+          <select id="barber-filter" aria-label="Filtrar por barbeiro"></select>
+        </div>
+
+        <div class="kpis" id="kpis"></div>
+        <div class="agenda" id="agenda"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL criar/editar -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <h2 id="modal-title">Novo agendamento</h2>
+      <form id="appt-form" class="form-grid" novalidate>
+        <input type="hidden" name="id">
+        <div class="form-grid form-grid--2">
+          <div class="field">
+            <label for="f-name">Cliente</label>
+            <input id="f-name" name="name" required placeholder="Nome do cliente">
+          </div>
+          <div class="field">
+            <label for="f-phone">WhatsApp</label>
+            <input id="f-phone" name="phone" type="tel" placeholder="(11) 90000-0000">
+          </div>
+        </div>
+        <div class="form-grid form-grid--2">
+          <div class="field">
+            <label for="f-service">Serviço</label>
+            <select id="f-service" name="serviceId"></select>
+          </div>
+          <div class="field">
+            <label for="f-barber">Barbeiro</label>
+            <select id="f-barber" name="barberId"></select>
+          </div>
+        </div>
+        <div class="form-grid form-grid--2">
+          <div class="field">
+            <label for="f-date">Data</label>
+            <input id="f-date" name="date" type="date" required style="color-scheme:dark">
+          </div>
+          <div class="field">
+            <label for="f-time">Horário</label>
+            <select id="f-time" name="time"></select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-status">Status</label>
+          <select id="f-status" name="status">
+            <option value="confirmado">Confirmado</option>
+            <option value="concluido">Concluído</option>
+            <option value="cancelado">Cancelado</option>
+          </select>
+        </div>
+        <div class="error-msg" id="form-error" role="alert"></div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn--ghost" id="cancel-modal">Fechar</button>
+          <button type="submit" class="btn">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/store.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

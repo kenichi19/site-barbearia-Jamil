@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbearia Jamil — Tradição & Navalha</title>
+  <meta name="description" content="Barbearia Jamil: cortes clássicos, barba com toalha quente e agendamento online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ícones reutilizáveis -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-diamond" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 10-3 10-3-10z"/><path fill="currentColor" d="M2 12l10-3 10 3-10 3z" opacity=".5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 12.5l5 5L20 6.5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="48" r="8"/><circle cx="48" cy="48" r="8"/><path d="M21 42L50 6M43 42L14 6"/><circle cx="32" cy="27" r="1.6" fill="currentColor"/></g></symbol>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="#topo" class="brand" aria-label="Barbearia Jamil — início">
+        <span class="brand-mark">J</span>
+        <span class="brand-text">Jamil<small>Barbearia</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="#sobre">A Casa</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#barbeiros">Barbeiros</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="#agendar" class="btn btn--sm">Agendar</a>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-seal reveal"><span>J</span><small>EST. 1998</small></div>
+        <span class="eyebrow reveal">Barbearia de tradição</span>
+        <h1 class="reveal">Jamil<em>a arte clássica da navalha</em></h1>
+        <p class="reveal">Um refúgio para o cavalheiro moderno. Cortes precisos, barba com toalha quente e o cuidado de quem respeita o ofício.</p>
+        <div class="hero-actions reveal">
+          <a href="#agendar" class="btn">Agendar horário</a>
+          <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span><b>Ter–Sáb</b> · 9h às 19h</span>
+          <span><b>Centro</b> · São Paulo</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="pole" aria-hidden="true"></div>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <figure class="about-frame reveal" style="margin:0">
+          <svg aria-hidden="true"><use href="#i-scissors"/></svg>
+          <figcaption>Desde 1998, na mesma cadeira</figcaption>
+        </figure>
+        <div class="reveal">
+          <span class="eyebrow">A Casa</span>
+          <h2>Onde o tempo desacelera</h2>
+          <p>A Barbearia Jamil nasceu do respeito pelo ofício tradicional. Cadeiras de couro, o perfume das loções clássicas e a conversa sem pressa — tudo pensado para que cada visita seja um ritual, não apenas um corte.</p>
+          <p>Unimos técnicas de mestres barbeiros com o conforto de agendar pelo celular, para que você chegue e seja atendido na hora marcada.</p>
+          <blockquote>“Um bom corte não se apressa — se aprecia.”</blockquote>
+          <div class="stats">
+            <div><b>25+</b><span>anos de ofício</span></div>
+            <div><b>3</b><span>mestres barbeiros</span></div>
+            <div><b>4.9</b><span>avaliação média</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section section--leather" id="servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Cardápio</span>
+          <h2>Serviços da Casa</h2>
+          <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+          <p>Cada serviço acompanha uma dose de café ou whisky da casa.</p>
+        </div>
+        <div class="menu" id="menu"></div>
+      </div>
+    </section>
+
+    <!-- BARBEIROS -->
+    <section class="section" id="barbeiros">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Os Mestres</span>
+          <h2>Nossos Barbeiros</h2>
+          <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+        </div>
+        <div class="team" id="team"></div>
+      </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="section section--leather" id="agendar">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Reserve sua cadeira</span>
+          <h2>Agende seu horário</h2>
+          <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+          <p>Em menos de um minuto. Sem filas, sem espera.</p>
+        </div>
+
+        <div class="booking reveal" id="booking">
+          <div class="steps" role="list">
+            <div class="step-tab active" data-tab="1" role="listitem"><b>I</b><span>Serviço</span></div>
+            <div class="step-tab" data-tab="2" role="listitem"><b>II</b><span>Barbeiro</span></div>
+            <div class="step-tab" data-tab="3" role="listitem"><b>III</b><span>Data & hora</span></div>
+            <div class="step-tab" data-tab="4" role="listitem"><b>IV</b><span>Seus dados</span></div>
+          </div>
+
+          <div class="step-body">
+            <!-- 1. Serviço -->
+            <div class="step-panel active" data-step="1">
+              <h3>Escolha o serviço</h3>
+              <p>Selecione o cuidado que deseja receber.</p>
+              <div class="choice-grid" id="svc-choices"></div>
+              <div class="step-actions">
+                <span></span>
+                <button class="btn" data-next disabled>Continuar</button>
+              </div>
+            </div>
+
+            <!-- 2. Barbeiro -->
+            <div class="step-panel" data-step="2">
+              <h3>Escolha o barbeiro</h3>
+              <p>Todos são mestres — escolha pela afinidade.</p>
+              <div class="choice-grid" id="barber-choices"></div>
+              <div class="step-actions">
+                <button class="btn btn--ghost" data-prev>Voltar</button>
+                <button class="btn" data-next disabled>Continuar</button>
+              </div>
+            </div>
+
+            <!-- 3. Data e hora -->
+            <div class="step-panel" data-step="3">
+              <h3>Data e horário</h3>
+              <p>Abrimos de terça a sábado. Horários riscados já estão reservados.</p>
+              <div class="days" id="days"></div>
+              <div class="slots" id="slots"></div>
+              <div class="step-actions">
+                <button class="btn btn--ghost" data-prev>Voltar</button>
+                <button class="btn" data-next disabled>Continuar</button>
+              </div>
+            </div>
+
+            <!-- 4. Dados -->
+            <div class="step-panel" data-step="4">
+              <h3>Seus dados</h3>
+              <p>Usaremos seu WhatsApp apenas para confirmar o horário.</p>
+              <form id="client-form" class="form-grid form-grid--2" novalidate>
+                <div class="field">
+                  <label for="c-name">Nome completo</label>
+                  <input id="c-name" name="name" autocomplete="name" required minlength="3" placeholder="Seu nome">
+                </div>
+                <div class="field">
+                  <label for="c-phone">WhatsApp</label>
+                  <input id="c-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(11) 90000-0000">
+                </div>
+              </form>
+              <div class="summary" id="summary"></div>
+              <div class="error-msg" id="book-error" role="alert"></div>
+              <div class="step-actions">
+                <button class="btn btn--ghost" data-prev>Voltar</button>
+                <button class="btn" id="confirm-btn">Confirmar agendamento</button>
+              </div>
+            </div>
+
+            <!-- 5. Confirmação -->
+            <div class="step-panel" data-step="5">
+              <div class="confirm">
+                <div class="confirm-icon"><svg><use href="#i-check"/></svg></div>
+                <h3>Horário reservado</h3>
+                <p class="script" style="font-size:1.2rem;color:var(--cream-dim);margin:6px 0 0">Será um prazer recebê-lo.</p>
+                <div class="code" id="confirm-code"></div>
+                <div class="summary" id="confirm-summary"></div>
+                <button class="btn btn--ghost" id="new-booking">Fazer outro agendamento</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Palavra dos clientes</span>
+          <h2>O que dizem por aí</h2>
+          <div class="ornament"><svg><use href="#i-diamond"/></svg></div>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal" style="margin:0"><div class="stars">★★★★★</div><p>“Melhor barba da cidade. A toalha quente é uma experiência à parte.”</p><cite>Ricardo A.</cite></figure>
+          <figure class="quote reveal" style="margin:0"><div class="stars">★★★★★</div><p>“Ambiente impecável, atendimento pontual. Agendei pelo celular em segundos.”</p><cite>Leonardo M.</cite></figure>
+          <figure class="quote reveal" style="margin:0"><div class="stars">★★★★★</div><p>“Frequento há dez anos. É tradição de família — meu filho já corta aqui.”</p><cite>Paulo S.</cite></figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="pole" aria-hidden="true"></div>
+
+    <!-- CONTATO -->
+    <section class="section section--leather" id="contato">
+      <div class="container">
+        <div class="info">
+          <div class="reveal">
+            <h4>Endereço</h4>
+            <p>Rua dos Cavalheiros, 120<br>Centro — São Paulo, SP</p>
+          </div>
+          <div class="reveal">
+            <h4>Funcionamento</h4>
+            <div class="hours-table">
+              <span>Terça a Sexta</span><span>9h – 19h</span>
+              <span>Sábado</span><span>9h – 19h</span>
+              <span class="closed">Domingo e Segunda</span><span class="closed">Fechado</span>
+            </div>
+          </div>
+          <div class="reveal">
+            <h4>Contato</h4>
+            <p>(11) 3000-0000<br>@barbeariajamil</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Barbearia Jamil · Tradição & Navalha · <a href="admin.html">Área do barbeiro</a>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
