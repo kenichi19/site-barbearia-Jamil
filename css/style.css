@@ -191,11 +191,11 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0; line-he
 .about-frame::before { content: ''; position: absolute; inset: 14px; border: 1px solid var(--gold-dim); }
 .about-frame svg { width: 45%; color: var(--gold); opacity: 0.85; }
 .about-frame figcaption { position: absolute; bottom: 30px; left: 0; right: 0; text-align: center; font-family: var(--script); font-style: italic; color: var(--cream-dim); font-size: 1.1rem; }
-.about-frame--photo { overflow: hidden; width: 100%; max-width: 440px; justify-self: center; aspect-ratio: 600 / 854; }
-.about-frame--photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: sepia(0.15) contrast(1.05); }
+.about-frame--photo { overflow: hidden; width: 100%; max-width: 440px; justify-self: center; aspect-ratio: 4 / 5; }
+.about-frame--photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; filter: sepia(0.15) contrast(1.05); }
 .about-frame--photo::before { z-index: 1; border-color: rgba(239, 230, 210, 0.45); }
-.about-frame--photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(20, 18, 16, 0.85)); }
-.about-frame--photo figcaption { z-index: 2; color: var(--cream); }
+.about-frame--photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, transparent 70%, rgba(20, 18, 16, 0.75)); }
+.about-frame--photo figcaption { z-index: 2; color: var(--cream); top: 30px; bottom: auto; }
 
 /* ---------- galeria ---------- */
 .gallery { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
@@ -216,6 +216,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0; line-he
 .shot figcaption b { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.15rem; }
 .shot figcaption span { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
 .shot--tall { aspect-ratio: 600 / 854; }
+.shot--tall img { object-position: center bottom; }
 .shot--wide { grid-column: 1 / -1; aspect-ratio: 600 / 563; }
 .shot--wide, .gallery-cta { order: 1; }
 .shot figcaption b { overflow-wrap: anywhere; }
@@ -233,6 +234,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0; line-he
   .gallery-mid { display: grid; gap: 20px; grid-template-rows: auto 1fr; }
   .shot--wide, .gallery-cta { grid-column: auto; order: 0; }
   .shot--tall { aspect-ratio: auto; min-height: 520px; }
+  .shot--tall figcaption { top: 0; bottom: auto; padding: 22px 20px 50px; background: linear-gradient(0deg, transparent, rgba(20, 18, 16, 0.9)); }
 }
 
 /* ---------- contato com foto ---------- */
